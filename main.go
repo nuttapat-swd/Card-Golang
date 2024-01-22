@@ -1,9 +1,11 @@
 package main
 
+import "fmt"
+
 func main() {
 	cards := newDeck()
 
-	hands, remainingCards := deal(cards, 5)
-	hands.print()
-	remainingCards.print()
+	if cards.saveToFile("test.txt") != nil {
+		fmt.Println("eieieieieiei")
+	}
 }
